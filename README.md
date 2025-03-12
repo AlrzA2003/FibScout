@@ -9,6 +9,7 @@ FibScout is a Python project that leverages technical indicators—specifically 
 - [Installation](#installation)
 - [Setup](#setup)
 - [Usage](#usage)
+- [Deployment on Railway](#deployment-on-railway)
 - [How It Works](#how-it-works)
 - [Risk Disclaimer](#risk-disclaimer)
 - [Resources](#resources)
@@ -26,7 +27,7 @@ FibScout is a Python project that leverages technical indicators—specifically 
 ## Prerequisites
 
 - Python 3.7+
-- A cryptocurrency exchange account (e.g., Binance via `ccxt` or similar)
+- A cryptocurrency exchange account (e.g., Binance via `ccxt.binance()` or similar)
 - A Telegram account and a bot token (from [BotFather](https://core.telegram.org/bots#3-how-do-i-create-a-bot))
 - Basic understanding of Python and algorithmic trading principles
 
@@ -76,6 +77,36 @@ The script will:
 - Connect to the cryptocurrency exchange and fetch market data.
 - Compute technical indicators and generate candlestick charts with Fibonacci retracement levels.
 - Start a Telegram bot to interact with you and send real-time alert messages when market conditions are triggered.
+
+## Deployment on Railway
+
+To deploy FibScout on [Railway](https://railway.com/) for free (no credit card required), follow these steps:
+
+1. Ensure you have the `Dockerfile` and `nixpacks.toml` files in your project directory.
+
+2. Create a Railway account and start a new project:
+
+    [Sign up for Railway](https://railway.com/) (free trial available)
+
+3. Deploy your repository:
+
+    - Click on "New Project" and select "Deploy from GitHub".
+    - Choose your FibScout repository.
+
+4. Configure Environment Variables:
+
+    Add the following variables in the Railway dashboard:
+
+    ```bash
+    symbol=BTC/USDT
+    timeframe=4h
+    token_id=YOUR_TELEGRAM_BOT_TOKEN
+    ```
+
+5. Deploy and Monitor:
+
+    - Railway will automatically build and deploy your project using the `Dockerfile`.
+    - Monitor logs and manage the service through the Railway dashboard.
 
 ## How It Works
 
