@@ -404,7 +404,7 @@ class fib_ao_strategy:
                 BotCommand("stop", "Pause alerts 🚫"),
             ]
             await application.bot.set_my_commands(commands)
-            await application.run_polling()
+            await application.run_polling(disable_signals=True)
     
         new_loop = asyncio.new_event_loop()
         asyncio.set_event_loop(new_loop)
