@@ -60,7 +60,7 @@ class fib_ao_strategy:
                 settings[key] = value
         self.symbol = settings["symbol"]
         self.timeframe = settings["timeframe"]
-        self.ex = ccxt.gate()
+        self.ex = ccxt.binance()
         self.fig = None
         self.ret_limits = None
         self.fib_numbers = [0, 0.236, 0.382, 0.5, 0.618, 0.786, 1, 1.414, 1.618]
