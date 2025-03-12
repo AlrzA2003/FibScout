@@ -20,7 +20,7 @@ FibScout is a Python project that leverages technical indicators—specifically 
 
 - **Real-Time Data Fetching:** Retrieves live OHLCV data from crypto exchanges using ccxt.
 - **Technical Analysis:** Calculates the Awesome Oscillator and dynamically computes Fibonacci retracement levels.
-- **Interactive Charting:** Generates candlestick charts with Fibonacci horizontal lines and legends using mplfinance and Matplotlib.
+- **Interactive Charting:** Generates candlestick charts with Fibonacci horizontal lines using mplfinance and Matplotlib.
 - **Telegram Alert Bot:** Sends real-time alerts to your Telegram chat when market conditions are met.
 - **Asynchronous and Scheduled Tasks:** Uses multithreading and asyncio to concurrently manage data updates, strategy evaluations, and bot interactions.
 
@@ -104,7 +104,7 @@ FibScout operates as follows:
 
 1. **Data Acquisition:** Fetches live OHLCV data from a crypto exchange using `ccxt.gate()`.
 2. **Technical Analysis:** Computes the Awesome Oscillator and determines key Fibonacci retracement levels by analyzing recent market trends.
-3. **Charting:** Plots these levels on candlestick charts with mplfinance and Matplotlib, complete with color-coded horizontal lines and legends.
+3. **Charting:** Plots these levels on candlestick charts with mplfinance and Matplotlib.
 4. **Real-Time Alerts:** Sends Telegram messages with alert information when the current price moves within specific Fibonacci bands.
 5. **Asynchronous Execution:** Runs the Telegram bot (handling commands such as `/start`, `/help`, `/chart`, `/stop`) on the main thread, while a scheduler in a background thread continuously triggers data updates and strategy evaluations.
 
