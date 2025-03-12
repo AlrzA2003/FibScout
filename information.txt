@@ -1,3 +1,3 @@
 symbol=BTC/USDT
 timeframe=4h
-token_id=7502424590:AAEUXzoOIEC5uxkVjyLJM5FlahG-hU_U4uk
+token_id=YOUR_TELEGRAM_BOT_TOKEN
