@@ -1,0 +1,11 @@
+ccxt
+pandas
+numpy
+matplotlib
+mplfinance
+schedule
+python-telegram-bot>=20.0
+nest_asyncio
+tzlocal==2.1
+apscheduler==3.9.1
+pytz
