@@ -51,7 +51,7 @@ FibScout is a Python project that leverages technical indicators—specifically 
 ## Setup
 
 1. **Configuration File:**  
-   Create a file named `information.txt` in the root directory with the following key-value pairs:
+   Change the information in a file named `information.txt` in the root directory with the following key-value pairs:
 
     ```
     symbol=BTC/USDT
