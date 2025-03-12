@@ -90,20 +90,10 @@ To deploy FibScout on [Railway](https://railway.com/) for free (no credit card r
 
 3. Deploy your repository:
 
-    - Click on "New Project" and select "Deploy from GitHub".
+    - Select "Deploy from GitHub".
     - Choose your FibScout repository.
 
-4. Configure Environment Variables:
-
-    Add the following variables in the Railway dashboard:
-
-    ```bash
-    symbol=BTC/USDT
-    timeframe=4h
-    token_id=YOUR_TELEGRAM_BOT_TOKEN
-    ```
-
-5. Deploy and Monitor:
+4. Deploy and Monitor:
 
     - Railway will automatically build and deploy your project using the `Dockerfile`.
     - Monitor logs and manage the service through the Railway dashboard.
