@@ -1,0 +1,3 @@
+providers = ["python"]
+[start]
+cmd = "python FibScout.py"
