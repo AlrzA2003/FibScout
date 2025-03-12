@@ -404,11 +404,9 @@ class fib_ao_strategy:
                 BotCommand("stop", "Pause alerts 🚫"),
             ]
             await application.bot.set_my_commands(commands)
-            await application.run_polling(disable_signals=True)
+            await application.run_polling()
     
-        new_loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(new_loop)
-        new_loop.run_until_complete(run_async())
+        asyncio.run(run_async())
 
 
     def scheduler_loop(self):
@@ -442,9 +440,8 @@ class fib_ao_strategy:
         schedule.every(20).seconds.do(lambda: self.strategy())
 
         # Use threading to run the bot and the scheduler concurrently.
-        bot_thread = threading.Thread(target=self.start_bot, daemon=True)
         scheduler_thread = threading.Thread(target=self.scheduler_loop, daemon=True)
-        bot_thread.start()
+        self.start_bot()
         scheduler_thread.start()
 
         bot_thread.join()
