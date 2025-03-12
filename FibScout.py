@@ -147,7 +147,7 @@ class fib_ao_strategy:
         except Exception:
             print("⚠️ Please run get_data() first!")
 
-    def fibonacci(self, fib_levels: np.ndarray | list) -> list:
+    def fibonacci(self, fib_levels):
         """
         Calculate Fibonacci retracement levels based on recent oscillation swings.
 
