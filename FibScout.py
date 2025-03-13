@@ -165,7 +165,7 @@ class fib_ao_strategy:
         data = self.data.copy()
         # Identify swing points where the sign of 'ao_sign' changes.
         data['chunks'] = (data['ao_sign'] != data['ao_sign'].shift(1)).astype(int).shift(-1)
-        filtered_data_time = data[data["chunks"] != 0].dropna().iloc[-3:].index
+        filtered_data_time = data[data["chunks"] != 0].dropna().iloc[-4:-1].index
         first_chunk, second_chunk, third_chunk = filtered_data_time[0], filtered_data_time[1], filtered_data_time[2]
         if data.loc[second_chunk:third_chunk, "ao_sign"].median() == 1:
             # Descending scenario.
